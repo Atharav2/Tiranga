@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiranga Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo">tiranga</div>
+    <h2>Log in</h2>
+    <p class="subtitle">Please log in with your phone number</p>
+    <p class="subtitle">If you forget your password, please contact customer service</p>
+
+    <div class="tabs">
+      <button class="tab active">📱 Phone Login</button>
+    </div>
+
+    <form class="login-form" id="loginForm">
+      <label>📱 Phone Number</label>
+      <div class="input-group">
+        <select>
+          <option>+91</option>
+        </select>
+        <input type="text" id="phone" placeholder="Enter your phone number" required />
+      </div>
+
+      <label>🙍 Name</label>
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="remember">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button class="login-btn" type="submit">Log in</button>
+
+      <!-- Register disabled -->
+      <button class="register-btn" type="button" disabled title="Registration is disabled">
+        Register (Disabled)
+      </button>
+    </form>
+
+    <div class="bottom-links">
+      <a href="#">🔒 Forgot password</a>
+      <a href="#">💬 Customer Service</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+
+      if (!name || !phone) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      try {
+        const response = await fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, phone }),
+        });
+
+        const result = await response.json();
+        alert(result.message);
+      } catch (error) {
+        alert("Something went wrong!");
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>

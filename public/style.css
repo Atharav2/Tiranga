@@ -1,0 +1,149 @@
+body {
+  background-color: #737fda;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #202a6b;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  margin: 2px 0;
+  color: #ccc;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  border-bottom: 1px solid #555;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #ccc;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #00aaff;
+  border-bottom: 2px solid #00aaff;
+}
+
+.login-form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #2a377e;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.input-group select,
+.input-group input {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.input-group input:focus {
+  outline: none;
+  background-color: #32408d;
+}
+
+.eye-icon {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.login-btn, .register-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #3e3f4e;
+  color: #ccc;
+}
+
+.login-btn:hover {
+  background-color: #505266;
+}
+
+.register-btn {
+  background-color: transparent;
+  border: 1px solid #00aaff;
+  color: #00aaff;
+}
+
+.register-btn:hover {
+  background-color: #00aaff;
+  color: white;
+}
+
+.bottom-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.bottom-links a {
+  color: #a4c8ff;
+  text-decoration: none;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: 10px;
+  text-align: center;
+}

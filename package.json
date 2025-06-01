@@ -1,0 +1,17 @@
+{
+  "name": "name-collector",
+  "version": "1.0.0",
+  "description": "A simple app that collects user names",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.1"
+  }
+}
